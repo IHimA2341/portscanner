@@ -21,7 +21,11 @@ if args.hostname:
     remoteServerIP = socket.gethostbyname(remoteServer)
 elif args.hostIP:
     remoteServerIP = args.hostIP
+else:
+    print("Please enter either the hostname or the host ip")
+    sys.exit()
 
+    
 print("-" * 60)
 print("Please wait, scanning remote host " + remoteServerIP)
 print("-" * 60)
